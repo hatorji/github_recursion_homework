@@ -20,8 +20,12 @@ void AllNaturalNumbers(int m, int n)
     }
 }
 
-int startM = 1;
-int finishN = 9;
+Console.Write("Введите значение M: ");
+int startM = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите значение N: ");
+int finishN = Convert.ToInt32(Console.ReadLine());
+
+
 if(startM > finishN) // Без добавления "-1" к границе отрезка рекурсия съедала последнее число в переборе
     {
         AllNaturalNumbers(startM, finishN - 1);
